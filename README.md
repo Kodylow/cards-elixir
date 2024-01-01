@@ -42,3 +42,24 @@ deck.deal();        // Deck[Card2, Card3, ...]
 - Cards Functional
   - No concept of instance variables!
 ![Alt text](./assets/cards_fp.png)
+
+
+Number of arguments a funciton accepts is called its `arity`.
+
+Immutable data structures are a core concept of functional programming. In Elixir, we have lists, tuples, maps, and structs. All of these data structures are immutable. This means that once they are created, they cannot be modified. Instead, any operation on an immutable data structure will return a new copy of that data structure with the modification applied.
+
+- Tuples
+![Alt text](assets/elixir_tuples.png)
+
+- Pattern Matching
+  - Elixir's replacement for variable assignment
+  - Used any time you see the `=` operator
+  - The left side of the `=` is a pattern
+  - The right side of the `=` is a value
+![Alt text](assets/elixir_pattern_matching.png)
+
+
+- Relationship to Erlang
+
+Code written in Elixir is transpiled to Erlang bytecode, then is compiled and executed on the Erlang virtual machine (BEAM, conceptually similar to JVM). Elixir can be thought of as a more modern syntax for Erlang. Elixir also provides a lot of conveniences that Erlang does not, such as a package manager, a test framework, and a build tool.
+
