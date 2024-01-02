@@ -100,3 +100,36 @@ IO.puts(list[:age])  # Outputs: 31
 [name: name] = list
 IO.puts(name)  # Outputs: "John"
 ```
+
+### Structs
+Structs are maps with a defined set of keys. They are defined using the defstruct macro.
+
+```elixir
+defmodule User do
+  defstruct name: "John", age: 30
+end
+
+# Creating a struct
+user = %User{name: "Alice", age: 25}
+
+# Accessing values
+IO.puts(user.name)  # Outputs: "Alice"
+
+# Updating a struct
+user = %{user | age: 26}
+IO.puts(user.age)  # Outputs: 26
+```
+
+### Pattern matching with structs
+Pattern matching with structs is similar to pattern matching with maps, except that you must specify the struct name.
+
+```elixir
+%User{name: name} = user
+IO.puts(name)  # Outputs: "Alice"
+
+# Pattern matching to ensure a specific structure
+%User{} = user  # This will succeed
+
+%SomeOtherStruct{} = user  # This will fail with a MatchError
+```
+
