@@ -2,11 +2,13 @@ defmodule CardsTest do
   use ExUnit.Case
   doctest Cards
 
+  # Setup is a special callback run before each test
   setup do
     deck = Cards.create_deck()
     {:ok, deck: deck}
   end
 
+  # context is the state returned from setup
   test "create_deck/0", context do
     assert length(context[:deck]) == 52
   end
