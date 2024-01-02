@@ -63,3 +63,4 @@ Immutable data structures are a core concept of functional programming. In Elixi
 
 Code written in Elixir is transpiled to Erlang bytecode, then is compiled and executed on the Erlang virtual machine (BEAM, conceptually similar to JVM). Elixir can be thought of as a more modern syntax for Erlang. Elixir also provides a lot of conveniences that Erlang does not, such as a package manager, a test framework, and a build tool.
 
+- Atoms: Atoms are constants where their name is their own value. They are often used to express state, such as `:ok` or `:error`, useful for pattern matching. They are also used to reference modules, such as `:math` or `:lists`.
